@@ -1,16 +1,19 @@
 name: "Kubernetes manifests"
 on:
-  pull_request:
-   paths: 
-   - 'cmd/k8s-operator/**'
-   - 'k8s-operator/**'
-   - '.github/workflows/kubemanifests.yaml'
 
-# Cancel workflow run if there is a newer push to the same PR for which it is
-# running
-concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
-  cancel-in-progress: true
+  workflow_dispatch: 
+  
+#   pull_request:
+#    paths: 
+#    - 'cmd/k8s-operator/**'
+#    - 'k8s-operator/**'
+#    - '.github/workflows/kubemanifests.yaml'
+
+# # Cancel workflow run if there is a newer push to the same PR for which it is
+# # running
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+#   cancel-in-progress: true
 
 jobs:
   testchart:
