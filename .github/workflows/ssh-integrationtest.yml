@@ -7,11 +7,14 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  pull_request:
-    paths:
-      - "ssh/**"
-      - "tempfork/gliderlabs/ssh/**"
-      - ".github/workflows/ssh-integrationtest"
+
+  workflow_dispatch: 
+  
+  # pull_request:
+  #   paths:
+  #     - "ssh/**"
+  #     - "tempfork/gliderlabs/ssh/**"
+  #     - ".github/workflows/ssh-integrationtest"
 jobs:
   ssh-integrationtest:
     runs-on: ubuntu-latest
