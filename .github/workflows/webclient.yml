@@ -2,11 +2,11 @@ name: webclient
 on:
   workflow_dispatch:
   # For now, only run on requests, not the main branches.
-  pull_request:
-    paths:
-      - "client/web/**"
-      - ".github/workflows/webclient.yml"
-      - "!**.md"
+  # pull_request:
+  #   paths:
+  #     - "client/web/**"
+  #     - ".github/workflows/webclient.yml"
+  #     - "!**.md"
   # TODO(soniaappasamy): enable for main branch after an initial waiting period.
   #push:
   #  branches:
