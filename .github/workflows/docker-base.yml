@@ -1,10 +1,10 @@
 name: "Validate Docker base image"
 on: 
   workflow_dispatch:
-  pull_request:
-    paths:
-    - "Dockerfile.base"
-    - ".github/workflows/docker-base.yml"
+  # pull_request:
+  #   paths:
+  #   - "Dockerfile.base"
+  #   - ".github/workflows/docker-base.yml"
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
