@@ -8,15 +8,18 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  push:
-    branches:
-      - "main"
-      - "release-branch/*"
-  pull_request:
-    # all PRs on all branches
-  merge_group:
-    branches:
-      - "main"
+
+  workflow_dispatch: 
+  
+  # push:
+  #   branches:
+  #     - "main"
+  #     - "release-branch/*"
+  # pull_request:
+  #   # all PRs on all branches
+  # merge_group:
+  #   branches:
+  #     - "main"
 jobs:
   EasyEasy:
     runs-on: ubuntu-latest
