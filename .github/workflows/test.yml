@@ -22,15 +22,18 @@ env:
   CMD_GO_USE_GIT_HASH: "true"
 
 on:
-  push:
-    branches:
-      - "main"
-      - "release-branch/*"
-  pull_request:
-    # all PRs on all branches
-  merge_group:
-    branches:
-      - "main"
+
+  workflow_dispatch: 
+  
+  # push:
+  #   branches:
+  #     - "main"
+  #     - "release-branch/*"
+  # pull_request:
+  #   # all PRs on all branches
+  # merge_group:
+  #   branches:
+  #     - "main"
 
 concurrency:
   # For PRs, later CI runs preempt previous ones. e.g. a force push on a PR
