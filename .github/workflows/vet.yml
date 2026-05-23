@@ -9,15 +9,18 @@ env:
   CMD_GO_USE_GIT_HASH: "true"
 
 on:
-  push:
-    branches:
-      - main
-      - "release-branch/*"
-    paths:
-      - "**.go"
-  pull_request:
-    paths:
-      - "**.go"
+
+  workflow_dispatch: 
+  
+  # push:
+  #   branches:
+  #     - main
+  #     - "release-branch/*"
+  #   paths:
+  #     - "**.go"
+  # pull_request:
+  #   paths:
+  #     - "**.go"
 
 jobs:
   vet:
