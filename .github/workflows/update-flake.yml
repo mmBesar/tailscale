@@ -3,12 +3,13 @@ name: update-flake
 on:
   # run action when a change lands in the main branch which updates go.mod. Also
   # allow manual triggering.
-  push:
-    branches:
-      - main
-    paths:
-      - go.mod
-      - .github/workflows/update-flake.yml
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - go.mod
+  #     - .github/workflows/update-flake.yml
+      
   workflow_dispatch:
 
 concurrency:
