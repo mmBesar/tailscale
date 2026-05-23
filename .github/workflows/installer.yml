@@ -1,18 +1,21 @@
 name: test installer.sh
 
 on:
-  schedule:
-    - cron: '0 15 * * *' # 10am EST (UTC-4/5)
-  push:
-    branches:
-      - "main"
-    paths:
-      - scripts/installer.sh
-      - .github/workflows/installer.yml
-  pull_request:
-    paths:
-      - scripts/installer.sh
-      - .github/workflows/installer.yml
+
+  workflow_dispatch: 
+  
+  # schedule:
+  #   - cron: '0 15 * * *' # 10am EST (UTC-4/5)
+  # push:
+  #   branches:
+  #     - "main"
+  #   paths:
+  #     - scripts/installer.sh
+  #     - .github/workflows/installer.yml
+  # pull_request:
+  #   paths:
+  #     - scripts/installer.sh
+  #     - .github/workflows/installer.yml
 
 jobs:
   test:
