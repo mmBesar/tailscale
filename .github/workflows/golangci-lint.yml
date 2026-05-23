@@ -1,12 +1,12 @@
 name: golangci-lint
 on:
   # For now, only lint pull requests, not the main branches.
-  pull_request:
-    paths:
-      - ".github/workflows/golangci-lint.yml"
-      - "**.go"
-      - "go.mod"
-      - "go.sum"
+  # pull_request:
+  #   paths:
+  #     - ".github/workflows/golangci-lint.yml"
+  #     - "**.go"
+  #     - "go.mod"
+  #     - "go.sum"
   # TODO(andrew): enable for main branch after an initial waiting period.
   #push:
   #  branches:
